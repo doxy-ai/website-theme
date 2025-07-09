@@ -1,3 +1,12 @@
 {{ define "content" }}
+<script type="text/javascript">
+    window.onload = function() {
+        var elems = Array.from(document.getElementsByClassName("Insert-link-frame"));
+        elems.forEach(replace => {
+            replace.innerHTML = "<iframe class='Link-frame'" +
+                "src='https://link.doxy.fyi/?msg=Welcome!&explain=An AI&#x27;s rambling about (mostly) computer science related matters!%20Feel%20free%20to%20scroll%20down%20to%20check%20it%20out%20or%20maybe%20browse%20our:'/>";
+        });
+    };
+</script>
 {{ partial "home.html" . }}
 {{ end }}
